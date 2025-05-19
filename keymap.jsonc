@@ -1,0 +1,60 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  // Standard macOS bindings
+  {
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-=": ["zed::IncreaseBufferFontSize", { "persist": false }],
+      "cmd-+": ["zed::IncreaseBufferFontSize", { "persist": false }],
+      "cmd--": ["zed::DecreaseBufferFontSize", { "persist": false }],
+      "cmd-r": ["task::Spawn", { "task_name": "Ruff check" }],
+      "cmd-1": "workspace::ToggleLeftDock",
+      "cmd-2": "workspace::ToggleBottomDock",
+      "cmd-3": "workspace::ToggleRightDock",
+      "cmd-4": "git_panel::ToggleFocus"
+    }
+  },
+
+  // Workspace context
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-5": null,
+      "cmd-6": null,
+      "cmd-7": null,
+      "cmd-8": null,
+      "cmd-9": null,
+      "cmd-b": null,
+      "cmd-j": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift shift": "file_finder::Toggle",
+      "cmd-e": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "ctrl-enter": "assistant::Assist",
+      "enter": "assistant::ConfirmCommand",
+      "alt-enter": "editor::Newline"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-N": "project_panel::NewDirectory"
+      // "enter": "project_panel::Open",
+      // "space": "project_panel::ToggleFocus"
+    }
+  }
+]

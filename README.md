@@ -1,2 +1,22 @@
-# zed-editor-config
-Config for Zed editor to work with python
+# Zed Editor Config 🚀
+
+Configuration for Zed editor to work with Python.
+
+## Font
+Download JetBrains Mono:  
+https://www.jetbrains.com/lp/mono/?ysclid=mavejckcrh411811122
+
+## Extensions
+- Python
+- Markdown
+- Ruff
+- Make
+- Dockerfile
+- Toml
+- CSV
+
+## Theme
+- Catppuccin Frappé - No Italics
+
+## Icons Theme
+- Jetbrains New UI Icons (Dark)

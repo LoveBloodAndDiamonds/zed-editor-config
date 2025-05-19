@@ -1,0 +1,9 @@
+// Static tasks configuration.
+[
+  {
+    "label": "Ruff check",
+    "command": "ruff check --fix .",
+    "reveal_target": "center",
+    "description": "Run Ruff linter on the project",
+  },
+]

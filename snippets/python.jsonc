@@ -1,0 +1,40 @@
+{
+  "Function Snippet": {
+    "prefix": "py_def",
+    "description": "Default function snippet",
+    "body": [
+      "def ${1:...}(${2:...}) -> ${3:None}:",
+      "\"\"\"${4:}\"\"\"",
+      "    ${5:pass}"
+    ]
+  },
+  "Main Entry Point": {
+    "prefix": "py_main",
+    "description": "Creates main entry point for the application",
+    "body": [
+      "def main() -> None:",
+      "    \"\"\"Main entry point for the application.\"\"\"",
+      "",
+      "",
+      "if __name__ == \"__main__\":",
+      "    main()",
+      ""
+    ]
+  },
+  "Async Main Entry Point": {
+    "prefix": "py_amain",
+    "description": "Creates async main entry point for the application",
+    "body": [
+      "import asyncio",
+      "",
+      "",
+      "async def main() -> None:",
+      "    \"\"\"Main entry point for the application.\"\"\"",
+      "",
+      "",
+      "if __name__ == \"__main__\":",
+      "    asyncio.run(main())",
+      ""
+    ]
+  }
+}

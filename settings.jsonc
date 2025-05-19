@@ -1,0 +1,93 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "autosave": "on_focus_change",
+  "tabs": {
+    "file_icons": true,
+    "show_diagnostics": "all"
+  },
+  "edit_predictions": {
+    "mode": "eager",
+    "copilot": {
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "base_keymap": "JetBrains",
+  "buffer_line_height": "comfortable",
+  "ui_font_family": "JetBrains Mono NL",
+  "buffer_font_family": "JetBrains Mono NL",
+  "ui_font_size": 21,
+  "buffer_font_size": 17,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Frappé"
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/.ruff_cache",
+    "**/.ropeproject",
+    "**/.venv",
+    "**/venv",
+    "**/__pycache__"
+  ],
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "external": {
+            "command": "ruff",
+            "arguments": ["format", "-"]
+          }
+        },
+        {
+          "code_actions": {
+            // Fix all auto-fixable lint violations
+            "source.fixAll.ruff": true,
+            // Organize imports
+            "source.organizeImports.ruff": true
+          }
+        }
+      ]
+    }
+  },
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace" // анализировать весь проект
+        },
+        "python": {
+          "pythonPath": ".venv/bin/python" // путь к интерпретатору в виртуальной среде
+        }
+      }
+    }
+  }
+}
