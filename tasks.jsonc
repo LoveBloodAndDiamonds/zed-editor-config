@@ -6,4 +6,10 @@
     "reveal_target": "center",
     "description": "Run Ruff linter on the project",
   },
+  {
+    "label": "Ruff format",
+    "command": "ruff format .",
+    "reveal_target": "center",
+    "description": "Run Ruff formatter on the project",
+  },
 ]
