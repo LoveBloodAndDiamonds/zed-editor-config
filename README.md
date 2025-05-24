@@ -3,11 +3,12 @@
 Configuration for Zed editor to work with Python.
 
 ## Font
-Download JetBrains Mono:  
+Download JetBrains Mono:
 https://www.jetbrains.com/lp/mono/?ysclid=mavejckcrh411811122
 
 ## Extensions
 - Python
+- Basedpyright
 - Markdown
 - Ruff
 - Make

@@ -8,7 +8,16 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
-    "default_profile": "write",
+    "profiles": {
+      "test": {
+        "name": "Test",
+        "tools": {},
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      }
+    },
+    "button": false,
+    "default_profile": "ask",
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
@@ -28,13 +37,13 @@
     },
     "enabled_in_text_threads": false
   },
-  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "icon_theme": "JetBrains Icons Dark",
   "base_keymap": "JetBrains",
   "buffer_line_height": "comfortable",
   "ui_font_family": "JetBrains Mono NL",
   "buffer_font_family": "JetBrains Mono NL",
   "ui_font_size": 21,
-  "buffer_font_size": 17,
+  "buffer_font_size": 18,
   "theme": {
     "mode": "system",
     "light": "One Light",
@@ -89,5 +98,19 @@
         }
       }
     }
+  },
+  "scrollbar": {
+    "diagnostics": "information"
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "terminal": {
+    "button": false
   }
 }
+
+// inlay_hints - как-то видо-изменить подсказки
