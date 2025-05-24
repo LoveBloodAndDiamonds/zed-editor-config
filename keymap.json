@@ -27,7 +27,7 @@
     "bindings": {
       "cmd-5": null,
       "cmd-6": null,
-      "cmd-7": null,
+      // "cmd-7": null,
       "cmd-8": null,
       "cmd-9": null,
       "cmd-b": null,
@@ -38,7 +38,9 @@
     "context": "Editor",
     "bindings": {
       "shift shift": "file_finder::Toggle",
-      "cmd-e": "project_panel::ToggleFocus"
+      "cmd-e": "project_panel::ToggleFocus",
+      "ctrl-enter": "editor::GoToDefinition"
+      // "f12": "editor::GoToDefinition"
     }
   },
   {
@@ -55,6 +57,13 @@
       "cmd-N": "project_panel::NewDirectory"
       // "enter": "project_panel::Open",
       // "space": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Terminal",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-t": "workspace::NewTerminal"
     }
   }
 ]
