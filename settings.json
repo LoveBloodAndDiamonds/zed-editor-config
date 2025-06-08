@@ -8,20 +8,12 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
-    "profiles": {
-      "test": {
-        "name": "Test",
-        "tools": {},
-        "enable_all_context_servers": false,
-        "context_servers": {}
-      }
-    },
     "button": false,
-    "default_profile": "ask",
+    "default_profile": "write",
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-sonnet-4"
     },
     "version": "2"
   },
@@ -47,7 +39,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Frappé"
+    "dark": "One Light"
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -67,7 +59,7 @@
   ],
   "languages": {
     "Python": {
-      "language_servers": ["pyright", "ruff"],
+      "language_servers": ["basedpyright", "ruff", "!pyright"],
       "format_on_save": "on",
       "formatter": [
         {
@@ -88,13 +80,16 @@
     }
   },
   "lsp": {
-    "pyright": {
+    "basedpyright": {
       "settings": {
-        "python.analysis": {
-          "diagnosticMode": "workspace" // анализировать весь проект
-        },
         "python": {
           "pythonPath": ".venv/bin/python" // путь к интерпретатору в виртуальной среде
+        },
+        "basedpyright.analysis": {
+          "diagnosticMode": "workspace",
+          "inlayHints": {
+            "callArgumentNames": false
+          }
         }
       }
     }

@@ -3,8 +3,8 @@
     "prefix": "py_def",
     "description": "Default function snippet",
     "body": [
-      "def ${1:...}(${2:...}) -> ${3:None}:",
-      "\"\"\"${4:}\"\"\"",
+      "def ${1:func_name}(${2:arg: int, arg2: str}) -> ${3:None}:",
+      "    \"\"\"${4:}.\"\"\"",
       "    ${5:pass}"
     ]
   },
