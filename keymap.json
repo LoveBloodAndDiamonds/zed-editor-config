@@ -39,8 +39,8 @@
     "bindings": {
       "shift shift": "file_finder::Toggle",
       "cmd-e": "project_panel::ToggleFocus",
-      "ctrl-enter": "editor::GoToDefinition"
-      // "f12": "editor::GoToDefinition"
+      "ctrl-enter": "editor::GoToDefinition",
+      "cmd-t": ["workspace::SendKeystrokes", "cmd-7"]
     }
   },
   {
@@ -54,9 +54,10 @@
   {
     "context": "ProjectPanel",
     "bindings": {
-      "cmd-N": "project_panel::NewDirectory"
-      // "enter": "project_panel::Open",
-      // "space": "project_panel::ToggleFocus"
+      "cmd-N": "project_panel::NewDirectory",
+      "X": "project_panel::Open",
+      "space": "project_panel::ToggleFocus",
+      "enter": ["workspace::SendKeystrokes", "X space"]
     }
   },
   {
