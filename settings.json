@@ -8,9 +8,10 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
+    "play_sound_when_agent_done": true,
     "button": false,
-    "default_profile": "write",
-    "always_allow_tool_actions": true,
+    "default_profile": "ask",
+    "always_allow_tool_actions": false,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
@@ -19,6 +20,7 @@
   },
   "autosave": "on_focus_change",
   "tabs": {
+    "git_status": true,
     "file_icons": true,
     "show_diagnostics": "all"
   },
@@ -29,17 +31,17 @@
     },
     "enabled_in_text_threads": false
   },
-  "icon_theme": "JetBrains Icons Dark",
+  "icon_theme": "Catppuccin Latte",
   "base_keymap": "JetBrains",
   "buffer_line_height": "comfortable",
   "ui_font_family": "JetBrains Mono NL",
   "buffer_font_family": "JetBrains Mono NL",
   "ui_font_size": 21,
-  "buffer_font_size": 18,
+  "buffer_font_size": 25,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Light"
+    "dark": "Catppuccin Latte - No Italics"
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -82,14 +84,11 @@
   "lsp": {
     "basedpyright": {
       "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace" // анализировать весь проект
+        },
         "python": {
           "pythonPath": ".venv/bin/python" // путь к интерпретатору в виртуальной среде
-        },
-        "basedpyright.analysis": {
-          "diagnosticMode": "workspace",
-          "inlayHints": {
-            "callArgumentNames": false
-          }
         }
       }
     }
@@ -105,7 +104,8 @@
   },
   "terminal": {
     "button": false
-  }
+  },
+  "max_tabs": 5
 }
 
 // inlay_hints - как-то видо-изменить подсказки
