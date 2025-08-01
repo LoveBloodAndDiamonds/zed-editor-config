@@ -15,8 +15,7 @@
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
-    },
-    "version": "2"
+    }
   },
   "autosave": "on_focus_change",
   "tabs": {
@@ -25,23 +24,25 @@
     "show_diagnostics": "all"
   },
   "edit_predictions": {
-    "mode": "eager",
+    "mode": "subtle",
     "copilot": {
       "proxy_no_verify": null
     },
     "enabled_in_text_threads": false
   },
-  "icon_theme": "Catppuccin Latte",
+  "icon_theme": "Catppuccin Mocha",
   "base_keymap": "JetBrains",
   "buffer_line_height": "comfortable",
   "ui_font_family": "JetBrains Mono NL",
   "buffer_font_family": "JetBrains Mono NL",
-  "ui_font_size": 21,
+  "ui_font_size": 25,
+  // "ui_font_size": 30,
   "buffer_font_size": 25,
+  "agent_font_size": 25,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Latte - No Italics"
+    "dark": "One Dark"
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -103,9 +104,15 @@
     "button": false
   },
   "terminal": {
-    "button": false
+    "button": true
   },
-  "max_tabs": 5
+  "max_tabs": 5,
+  "debugger": {
+    "stepping_granularity": "line",
+    "save_breakpoints": true,
+    "dock": "bottom",
+    "button": false
+  }
 }
 
 // inlay_hints - как-то видо-изменить подсказки

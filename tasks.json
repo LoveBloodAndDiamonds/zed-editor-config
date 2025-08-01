@@ -3,13 +3,20 @@
   {
     "label": "Ruff check",
     "command": "ruff check --fix .",
-    "reveal_target": "center",
-    "description": "Run Ruff linter on the project"
+    "reveal_target": "center"
   },
   {
     "label": "Ruff format",
     "command": "ruff format .",
-    "reveal_target": "center",
-    "description": "Run Ruff formatter on the project"
+    "reveal_target": "center"
+  },
+  {
+    "label": "Run python file",
+    "command": "python3",
+    "args": ["$ZED_FILE"],
+    "use_new_terminal": false,
+    "env": {
+      "PYTHONPATH": "."
+    }
   }
 ]

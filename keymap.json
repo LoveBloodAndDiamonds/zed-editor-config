@@ -14,6 +14,7 @@
       "cmd-+": ["zed::IncreaseBufferFontSize", { "persist": false }],
       "cmd--": ["zed::DecreaseBufferFontSize", { "persist": false }],
       "cmd-r": ["task::Spawn", { "task_name": "Ruff check" }],
+      "cmd-shift-r": ["task::Spawn", { "task_name": "Run python file" }],
       "cmd-1": "workspace::ToggleLeftDock",
       "cmd-2": "workspace::ToggleBottomDock",
       "cmd-3": "workspace::ToggleRightDock",
