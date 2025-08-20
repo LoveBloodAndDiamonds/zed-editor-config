@@ -14,7 +14,7 @@
     "label": "Run python file",
     "command": "python3",
     "args": ["$ZED_FILE"],
-    "use_new_terminal": false,
+    "use_new_terminal": true,
     "env": {
       "PYTHONPATH": "."
     }

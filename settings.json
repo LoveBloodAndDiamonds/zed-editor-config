@@ -10,7 +10,7 @@
   "agent": {
     "play_sound_when_agent_done": true,
     "button": false,
-    "default_profile": "ask",
+    "default_profile": "write",
     "always_allow_tool_actions": false,
     "default_model": {
       "provider": "zed.dev",
@@ -38,11 +38,12 @@
   "ui_font_size": 25,
   // "ui_font_size": 30,
   "buffer_font_size": 25,
+  // "buffer_font_size": 30,
   "agent_font_size": 25,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Catppuccin Latte"
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -80,6 +81,9 @@
           }
         }
       ]
+    },
+    "Go": {
+      "language_servers": ["gopls", "golangci-lint"]
     }
   },
   "lsp": {
@@ -91,6 +95,17 @@
         "python": {
           "pythonPath": ".venv/bin/python" // путь к интерпретатору в виртуальной среде
         }
+      }
+    },
+    "golangci-lint": {
+      "initialization_options": {
+        "command": [
+          "/Users/lovebloodanddiamonds/go/bin/golangci-lint",
+          "run",
+          "--out-format",
+          "json",
+          "--issues-exit-code=1"
+        ]
       }
     }
   },
