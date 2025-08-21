@@ -1,6 +1,6 @@
 # Zed Editor Config 🚀
 
-Configuration for Zed editor to work with Python.
+Configuration for Zed editor to work with Python and Golang.
 
 ## Font
 Download JetBrains Mono:
