@@ -2,17 +2,22 @@
 [
   {
     "label": "Ruff check",
-    "command": "ruff check --fix .",
-    "reveal_target": "center"
+    "command": "ruff check .",
+    "reveal_target": "dock"
   },
   {
     "label": "Ruff format",
     "command": "ruff format .",
-    "reveal_target": "center"
+    "reveal_target": "dock"
+  },
+  {
+    "label": "Basedpyright check",
+    "command": "basedpyright src",
+    "reveal_target": "dock"
   },
   {
     "label": "Run python file",
-    "command": "python3",
+    "command": "uv run python3",
     "args": ["$ZED_FILE"],
     "use_new_terminal": true,
     "env": {

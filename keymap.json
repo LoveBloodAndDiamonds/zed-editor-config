@@ -14,6 +14,7 @@
       "cmd-+": ["zed::IncreaseBufferFontSize", { "persist": false }],
       "cmd--": ["zed::DecreaseBufferFontSize", { "persist": false }],
       "cmd-r": ["task::Spawn", { "task_name": "Ruff check" }],
+      "cmd-b": ["task::Spawn", { "task_name": "Basedpyright check" }],
       "cmd-shift-r": ["task::Spawn", { "task_name": "Run python file" }],
       "cmd-1": "workspace::ToggleLeftDock",
       "cmd-2": "workspace::ToggleBottomDock",
@@ -41,7 +42,9 @@
       "shift shift": "file_finder::Toggle",
       "cmd-e": "project_panel::ToggleFocus",
       "ctrl-enter": "editor::GoToDefinition",
-      "cmd-t": ["workspace::SendKeystrokes", "cmd-7"]
+      "cmd-t": ["workspace::SendKeystrokes", "cmd-7"],
+      "cmd-]": "window::ShowNextWindowTab",
+      "cmd-[": "window::ShowPreviousWindowTab"
     }
   },
   {
@@ -66,6 +69,83 @@
     "use_key_equivalents": true,
     "bindings": {
       "cmd-t": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "GitCommit > Editor",
+    "bindings": {
+      "ctrl-enter": "git::Commit"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "ctrl-enter": "git::Commit"
+    }
+  },
+  {
+    "context": "GitCommit > Editor",
+    "bindings": {
+      "cmd-enter": null
+    }
+  },
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "cmd-enter": null
+    }
+  },
+  {
+    "context": "CommitEditor > Editor",
+    "bindings": {
+      "ctrl-enter": "git::Commit"
+    }
+  },
+  {
+    "context": "(Workspace || Editor)",
+    "bindings": {
+      "cmd-k": "git::Commit"
+    }
+  },
+  {
+    "context": "CommitEditor > Editor",
+    "bindings": {
+      "cmd-enter": null
+    }
+  },
+  {
+    "context": "GitDiff > Editor",
+    "bindings": {
+      "cmd-enter": null
+    }
+  },
+  {
+    "context": "GitCommit > Editor",
+    "bindings": {
+      "cmd-k": "git::GenerateCommitMessage"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-7": "editor::RestartLanguageServer"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-7": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-7": null
+    }
+  },
+  {
+    "context": "OutlinePanel",
+    "bindings": {
+      "cmd-7": null
     }
   }
 ]

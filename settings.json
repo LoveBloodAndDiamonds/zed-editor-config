@@ -7,16 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "agent": {
-    "play_sound_when_agent_done": true,
-    "button": false,
-    "default_profile": "write",
-    "always_allow_tool_actions": false,
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+  "git_panel": {
+    "sort_by_path": true
+  },
+  "minimap": {
+    "max_width_columns": 80
+  },
+  "confirm_quit": true,
+  "agent_servers": {
+    "codex": {
+      "default_model": "gpt-5.2-codex/medium",
+      "favorite_models": ["gpt-5.2-codex/medium"],
+      "default_config_options": {},
+      "favorite_config_option_values": {}
     }
   },
+  "agent": {},
+  "use_system_window_tabs": true,
   "autosave": "on_focus_change",
   "tabs": {
     "git_status": true,
@@ -30,20 +37,19 @@
     },
     "enabled_in_text_threads": false
   },
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": "JetBrains Icons Light",
   "base_keymap": "JetBrains",
   "buffer_line_height": "comfortable",
   "ui_font_family": "JetBrains Mono NL",
   "buffer_font_family": "JetBrains Mono NL",
-  "ui_font_size": 25,
-  // "ui_font_size": 30,
-  "buffer_font_size": 25,
-  // "buffer_font_size": 30,
-  "agent_font_size": 25,
+  "ui_font_size": 28,
+  "buffer_font_size": 22,
+  "agent_ui_font_size": 22,
+  "agent_buffer_font_size": 20,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "Catppuccin Latte"
+    "dark": "One Dark"
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -72,14 +78,7 @@
             "arguments": ["format", "-"]
           }
         },
-        {
-          "code_actions": {
-            // Fix all auto-fixable lint violations
-            "source.fixAll.ruff": true,
-            // Organize imports
-            "source.organizeImports.ruff": true
-          }
-        }
+        { "code_action": "source.fixAll.ruff" }
       ]
     },
     "Go": {
@@ -90,7 +89,8 @@
     "basedpyright": {
       "settings": {
         "python.analysis": {
-          "diagnosticMode": "workspace" // анализировать весь проект
+          "diagnosticMode": "workspace", // анализировать весь проект
+          "exclude": ["**/__pycache__", "**/.venv", "tests/"]
         },
         "python": {
           "pythonPath": ".venv/bin/python" // путь к интерпретатору в виртуальной среде
@@ -127,7 +127,8 @@
     "save_breakpoints": true,
     "dock": "bottom",
     "button": false
+  },
+  "file_types": {
+    "Dockerfile": ["Dockerfile.*"]
   }
 }
-
-// inlay_hints - как-то видо-изменить подсказки
