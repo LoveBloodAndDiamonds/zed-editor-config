@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "title_bar": {
+    "show_menus": false,
+    "show_branch_icon": true
+  },
+  "language_models": {
+    "openai_compatible": {}
+  },
   "git_panel": {
     "sort_by_path": true
   },
@@ -15,14 +22,43 @@
   },
   "confirm_quit": true,
   "agent_servers": {
-    "codex": {
-      "default_model": "gpt-5.2-codex/medium",
-      "favorite_models": ["gpt-5.2-codex/medium"],
-      "default_config_options": {},
-      "favorite_config_option_values": {}
+    "claude-acp": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry",
+      "default_model": "gpt-5.3-codex/medium",
+      "favorite_models": ["gpt-5.3-codex/medium"],
+      "default_config_options": {
+        "mode": "auto",
+        "model": "gpt-5.3-codex",
+        "reasoning_effort": "medium"
+      },
+      "favorite_config_option_values": {
+        "mode": ["auto"],
+        "model": ["gpt-5.3-codex"]
+      }
     }
   },
-  "agent": {},
+  "agent": {
+    "favorite_models": [
+      {
+        "provider": "openrouter",
+        "model": "anthropic/claude-sonnet-4.6",
+        "enable_thinking": false
+      },
+      {
+        "provider": "openrouter",
+        "model": "anthropic/claude-sonnet-4.5",
+        "enable_thinking": false
+      }
+    ],
+    "default_model": {
+      "provider": "mistral",
+      "model": "codestral-latest",
+      "enable_thinking": false
+    }
+  },
   "use_system_window_tabs": true,
   "autosave": "on_focus_change",
   "tabs": {
@@ -31,6 +67,17 @@
     "show_diagnostics": "all"
   },
   "edit_predictions": {
+    "codestral": {
+      "api_url": "https://codestral.mistral.ai",
+      "max_tokens": 155
+    },
+    "ollama": {},
+    "open_ai_compatible_api": {
+      "model": "qwen/qwen-2.5-coder-3b",
+      "api_url": "https://openrouter.ai/api/v1",
+      "max_output_tokens": 128
+    },
+    "provider": "codestral",
     "mode": "subtle",
     "copilot": {
       "proxy_no_verify": null
@@ -48,7 +95,7 @@
   "agent_buffer_font_size": 20,
   "theme": {
     "mode": "dark",
-    "light": "One Light",
+    "light": "Ayu Light",
     "dark": "One Dark"
   },
   "file_scan_exclusions": [
@@ -116,7 +163,8 @@
     "button": false
   },
   "notification_panel": {
-    "button": false
+    "button": false,
+    "dock": "left"
   },
   "terminal": {
     "button": true

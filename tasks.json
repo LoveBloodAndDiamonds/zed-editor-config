@@ -1,6 +1,11 @@
 // Static tasks configuration.
 [
   {
+    "label": "Ruff+Basedpyright check",
+    "command": "echo 'Running ruff check and basedpyright...' && echo '\n' && echo 'Ruff check:' && ruff check . && echo '\n' && echo 'Basedpyright check:' && basedpyright src",
+    "reveal_target": "dock"
+  },
+  {
     "label": "Ruff check",
     "command": "ruff check .",
     "reveal_target": "dock"
