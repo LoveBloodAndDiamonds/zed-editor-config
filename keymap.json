@@ -13,7 +13,7 @@
       "cmd-=": ["zed::IncreaseBufferFontSize", { "persist": false }],
       "cmd-+": ["zed::IncreaseBufferFontSize", { "persist": false }],
       "cmd--": ["zed::DecreaseBufferFontSize", { "persist": false }],
-      "cmd-r": ["task::Spawn", { "task_name": "Ruff check" }],
+      "cmd-r": ["task::Spawn", { "task_name": "Ruff+Basedpyright check" }],
       "cmd-b": ["task::Spawn", { "task_name": "Basedpyright check" }],
       "cmd-shift-r": ["task::Spawn", { "task_name": "Run python file" }],
       "cmd-1": "workspace::ToggleLeftDock",
